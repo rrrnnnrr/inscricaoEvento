@@ -1,4 +1,4 @@
-from modelo.banco_dados import BancoDeDados
+from modelo.banco_dados import InscricaoDAO
 from controle.controlador_inscricao import ControladorInscricao
 from modelo.evento import Evento
 from modelo.atleta import Atleta
@@ -10,7 +10,7 @@ def main():
     try:
         project_dir = Path(__file__).resolve().parent
         db_path = project_dir / "inscricoes.db"
-        banco = BancoDeDados(str(db_path))
+        banco = InscricaoDAO(str(db_path))
         controlador = ControladorInscricao()
 
         kits = {
@@ -18,7 +18,7 @@ def main():
             "Camiseta": 50.00,
             "Sem Kit": 0.00
         }
-        evento = Evento("Maratona de Floripa", kits)
+        evento = Evento("Maratona", kits)
 
         atleta_exemplo = Atleta("Ana Clara Ramlow", "45645645634")
 

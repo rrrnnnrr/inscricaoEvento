@@ -11,7 +11,7 @@ class Evento:
     nome: str
     kits: dict
 
-class BancoDeDados:
+class InscricaoDAO:
     def __init__(self, nome_banco="inscricoes.db"):
         self.conn = sqlite3.connect(nome_banco)
         self.criar_tabelas()

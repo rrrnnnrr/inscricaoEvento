@@ -1,8 +1,8 @@
-from modelo.banco_dados import BancoDeDados
+from modelo.banco_dados import InscricaoDAO
 
 class ControladorInscricao:
     def __init__(self):
-        self.banco = BancoDeDados()
+        self.banco = InscricaoDAO()
 
     def validar_dados(self, atleta, termos_aceitos, aptidao_fisica, evento_nome):
         erros = []
