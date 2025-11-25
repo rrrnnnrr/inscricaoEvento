@@ -18,9 +18,9 @@ def main():
             "Camiseta": 50.00,
             "Sem Kit": 0.00
         }
-        evento = Evento("Maratona", kits)
+        evento = Evento("Maratona 123", kits)
 
-        atleta_exemplo = Atleta("Ana Clara Ramlow", "45645645634")
+        atleta_exemplo = Atleta("Ruan", "04403155901")
 
         tela = TelaInscricao(controlador, evento, atleta_exemplo)
         tela.abrir()
